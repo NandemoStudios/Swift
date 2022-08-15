@@ -43,6 +43,9 @@ class Application(Frame):
         self.view_menu.add_command(label="Zoom Out", state=DISABLED)
         self.view_menu.add_separator()
         self.view_menu.add_command(label="Full Screen", command=self.full_screen)
+        self.view_menu.add_separator()
+        self.view_menu.add_checkbutton(label="Dark Mode", command=self.dark_mode)
+        self.view_menu.add_checkbutton(label="Show Line Numbers")
 
         # Create help section to menu
         self.help_menu = Menu(self.menu)
@@ -64,6 +67,21 @@ class Application(Frame):
     def help_about(self):
         # Redirect the user the the github page
         webbrowser.open("https://github.com/NandemoStudios/Swift")
+    
+    # Create dark mode function
+    def dark_mode(self):
+        # Check if dark mode is enabled
+        if self.view_menu.entrycget(6, "label") == "Dark Mode":
+            # Change the label to light mode
+            self.view_menu.entryconfigure(6, label="Light Mode")
+            # Change the background color to black
+            self.master.config(bg="gray")
+        # If dark mode is not enabled
+        else:
+            # Change the label to dark mode
+            self.view_menu.entryconfigure(6, label="Dark Mode")
+            # Change the background color to white
+            self.master.config(bg="white")
 # Create the window
 root = Tk()
 root.title("Swift Engine")
