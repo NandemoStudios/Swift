@@ -1,4 +1,4 @@
 # Swift
 A game engine with the aim of making games easy and understandable, whilst still providing powerful abilities to use.
-The engine is written in c++ and also uses c++ to run the code.
-I am a beginner to game engines, so creating one will be a bumpy ride for me, but i am always open for a challenge.
+The engine is written in python, which means that it is slower than most other game engines, but I am more comfortable using python over other programming languages.
+I may in the future rewrite the game engine in a different language so that I can speed the engine up and allow more personalisation out of it.
